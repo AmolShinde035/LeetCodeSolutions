@@ -1,0 +1,11 @@
+select e.name from Employee e join Employee m on e.id = m.managerId
+group by m.managerId having count(m.managerId)>=5
+--or
+-- select name
+-- from employee
+-- where id in (
+--     SELECT DISTINCT(managerId)
+--     FROM Employee 
+--     group by managerId
+--     having COUNT(*) >= 5
+--     ) ;
