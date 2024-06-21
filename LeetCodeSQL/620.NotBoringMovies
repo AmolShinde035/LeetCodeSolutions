@@ -1,0 +1,11 @@
+# Write your MySQL query statement below
+select *
+from Cinema
+where description <> 'boring' and id%2<>0
+order by rating desc;
+
+-- or
+-- SELECT * 
+-- FROM Cinema 
+-- WHERE MOD( id, 2) = 1 AND description <> 'boring' 
+-- ORDER BY rating DESC
